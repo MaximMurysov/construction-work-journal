@@ -1,3 +1,5 @@
+export type SortOrder = "asc" | "desc";
+
 export type WorkType = {
   id: number;
   name: string;
@@ -22,30 +24,22 @@ export type WorkEntryFormValues = {
   executorName: string;
 };
 
-export const emptyFormValues = (): WorkEntryFormValues => ({
-  performedAt: new Date().toISOString().slice(0, 10),
-  workTypeId: "",
-  volume: "",
-  unit: "",
-  executorName: "",
-});
+export type WorkEntryPayload = {
+  performedAt: string;
+  workTypeId: number;
+  volume: number;
+  unit: string;
+  executorName: string;
+};
 
-export function entryToFormValues(entry: WorkEntry): WorkEntryFormValues {
-  return {
-    performedAt: entry.performedAt,
-    workTypeId: String(entry.workTypeId),
-    volume: String(entry.volume),
-    unit: entry.unit,
-    executorName: entry.executorName,
-  };
-}
+export type JournalFilters = {
+  dateFrom: string;
+  dateTo: string;
+  sortOrder: SortOrder;
+};
 
-export function formValuesToPayload(values: WorkEntryFormValues) {
-  return {
-    performedAt: values.performedAt,
-    workTypeId: Number(values.workTypeId),
-    volume: Number(values.volume),
-    unit: values.unit.trim(),
-    executorName: values.executorName.trim(),
-  };
-}
+export type FieldErrors = Record<string, string>;
+
+export type ApiValidationError = {
+  errors: FieldErrors;
+};

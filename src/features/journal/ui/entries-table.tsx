@@ -1,6 +1,7 @@
 import type { WorkEntry } from "@/features/journal/model/types";
 
-import styles from "./journal-screen.module.css";
+import buttonStyles from "./shared/buttons.module.css";
+import styles from "./entries-table.module.css";
 
 type EntriesTableProps = {
   entries: WorkEntry[];
@@ -43,14 +44,14 @@ export function EntriesTable({ entries, loading, onEdit, onDelete }: EntriesTabl
                 <div className={styles.rowActions}>
                   <button
                     type="button"
-                    className={styles.linkButton}
+                    className={buttonStyles.linkButton}
                     onClick={() => onEdit(entry)}
                   >
                     Изменить
                   </button>
                   <button
                     type="button"
-                    className={styles.dangerButton}
+                    className={buttonStyles.dangerButton}
                     onClick={() => void onDelete(entry)}
                   >
                     Удалить

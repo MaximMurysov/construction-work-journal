@@ -1,4 +1,4 @@
-import styles from "./journal-screen.module.css";
+import styles from "./journal-header.module.css";
 
 export function JournalHeader() {
   return (

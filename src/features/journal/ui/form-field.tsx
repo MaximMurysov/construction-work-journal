@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-import styles from "./journal-screen.module.css";
+import styles from "./form-field.module.css";
 
 type FormFieldProps = {
   label: string;

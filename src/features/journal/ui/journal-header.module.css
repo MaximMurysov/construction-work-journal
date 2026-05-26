@@ -1,0 +1,18 @@
+.header h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-top: 8px;
+}
+
+.eyebrow {
+  color: #475569;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: #64748b;
+  max-width: 640px;
+}

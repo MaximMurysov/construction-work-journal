@@ -1,4 +1,4 @@
-import styles from "./journal-screen.module.css";
+import styles from "./journal-alert.module.css";
 
 type JournalAlertProps = {
   message: string;

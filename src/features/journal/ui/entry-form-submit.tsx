@@ -1,4 +1,5 @@
-import styles from "./journal-screen.module.css";
+import buttonStyles from "./shared/buttons.module.css";
+import styles from "./entry-form-submit.module.css";
 
 type EntryFormSubmitProps = {
   editingId: number | null;
@@ -14,7 +15,7 @@ export function EntryFormSubmit({ editingId, submitting }: EntryFormSubmitProps)
 
   return (
     <div className={styles.formActions}>
-      <button type="submit" className={styles.primaryButton} disabled={submitting}>
+      <button type="submit" className={buttonStyles.primaryButton} disabled={submitting}>
         {label}
       </button>
     </div>

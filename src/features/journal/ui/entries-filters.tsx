@@ -1,6 +1,7 @@
 import type { JournalFilters, SortOrder } from "@/features/journal/model/types";
 
-import styles from "./journal-screen.module.css";
+import buttonStyles from "./shared/buttons.module.css";
+import styles from "./entries-filters.module.css";
 
 type EntriesFiltersProps = {
   filters: JournalFilters;
@@ -48,7 +49,7 @@ export function EntriesFilters({
         </select>
       </label>
 
-      <button type="button" className={styles.secondaryButton} onClick={onReset}>
+      <button type="button" className={buttonStyles.secondaryButton} onClick={onReset}>
         Сбросить фильтры
       </button>
     </div>

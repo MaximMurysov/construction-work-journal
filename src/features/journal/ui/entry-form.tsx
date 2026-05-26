@@ -2,7 +2,8 @@ import { EntryFormFields } from "./entry-form-fields";
 import { EntryFormHeader } from "./entry-form-header";
 import { EntryFormSubmit } from "./entry-form-submit";
 import type { EntryFormProps } from "./entry-form.types";
-import styles from "./journal-screen.module.css";
+import formStyles from "./entry-form.module.css";
+import panelStyles from "./shared/panel.module.css";
 
 export function EntryForm({
   editingId,
@@ -16,10 +17,10 @@ export function EntryForm({
   onFieldChange,
 }: EntryFormProps) {
   return (
-    <section className={styles.panel}>
+    <section className={panelStyles.panel}>
       <EntryFormHeader editingId={editingId} onCancel={onCancel} />
 
-      <form className={styles.formGrid} onSubmit={onSubmit}>
+      <form className={formStyles.formGrid} onSubmit={onSubmit}>
         <EntryFormFields
           formValues={formValues}
           fieldErrors={fieldErrors}

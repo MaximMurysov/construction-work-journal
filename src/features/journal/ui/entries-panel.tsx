@@ -2,7 +2,8 @@ import type { JournalFilters, SortOrder, WorkEntry } from "@/features/journal/mo
 
 import { EntriesFilters } from "./entries-filters";
 import { EntriesTable } from "./entries-table";
-import styles from "./journal-screen.module.css";
+import buttonStyles from "./shared/buttons.module.css";
+import panelStyles from "./shared/panel.module.css";
 
 type EntriesPanelProps = {
   entries: WorkEntry[];
@@ -30,10 +31,10 @@ export function EntriesPanel({
   onDelete,
 }: EntriesPanelProps) {
   return (
-    <section className={styles.panel}>
-      <div className={styles.panelHeader}>
+    <section className={panelStyles.panel}>
+      <div className={panelStyles.panelHeader}>
         <h2>Записи журнала</h2>
-        <button type="button" className={styles.secondaryButton} onClick={() => void onRefresh()}>
+        <button type="button" className={buttonStyles.secondaryButton} onClick={() => void onRefresh()}>
           Обновить
         </button>
       </div>
